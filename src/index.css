@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Modern Typography */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Remove conflicting color scheme */
+  color-scheme: light;
+}
+
+/* Remove default margins and ensure proper box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Clean body styles */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Let App.css handle the background and text colors */
+}
+
+/* Remove default link styles that might conflict */
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Remove default button styles to let App.css handle them */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default heading styles */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+/* Remove default paragraph margins */
+p {
+  margin: 0;
+}
+
+/* Remove default list styles */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default input styles */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Ensure proper focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 768px) {
+  button,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
