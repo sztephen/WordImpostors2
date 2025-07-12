@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 :root {
   /* Modern Color Palette */
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -38,12 +43,16 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #f3f4f6;
+  background: #f3f4f6 !important;
   min-height: 100vh;
   color: var(--text-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Disable scrolling */
+  position: fixed; /* Prevent scrolling on iOS */
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes gradientShift {
@@ -59,6 +68,7 @@ body {
   justify-content: center;
   padding: 1.5rem;
   position: relative;
+  background: #f3f4f6;
 }
 
 .app::before {
