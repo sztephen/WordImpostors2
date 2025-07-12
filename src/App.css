@@ -982,14 +982,16 @@ input:checked + .slider:before {
   }
   
   .card {
-    width: calc(100% - 2rem);
+    width: calc(100% - 1rem);
     height: auto;
-    min-height: 280px;
-    max-height: 60vh;
+    min-height: 250px;
+    max-height: calc(100% - 1rem);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-lg);
     filter: none;
-    margin: 0.5rem;
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
   }
   
   .card:hover, .card:active {
@@ -1010,14 +1012,17 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 280px;
+    min-height: 250px;
+    background: #ffffff;
+    color: var(--text-primary);
   }
   
   .card-front p:first-child {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     margin-bottom: 1rem;
+    -webkit-text-fill-color: var(--primary-color) !important;
   }
   
   .word-display h3 {
@@ -1029,22 +1034,28 @@ input:checked + .slider:before {
     margin-bottom: 0;
     padding: 0.75rem 1rem 0.25rem;
     text-align: center;
-    background: transparent;
+    background: #ffffff;
+    color: var(--text-primary);
     border: none;
     flex-shrink: 0;
     position: relative;
     top: 0;
+    z-index: 10;
   }
   
   .gameplay-container {
-    padding: env(safe-area-inset-top, 0.5rem) 0 env(safe-area-inset-bottom, 0.5rem) 0;
-    width: 100%;
+    padding: 0;
+    width: 100vw;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for better mobile support */
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    justify-content: flex-start;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     box-sizing: border-box;
   }
   
@@ -1056,7 +1067,8 @@ input:checked + .slider:before {
     justify-content: center;
     min-height: 0;
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
+    overflow: hidden;
   }
   
   .impostor-selector, .difficulty-selector {
@@ -1080,8 +1092,10 @@ input:checked + .slider:before {
   .remember-button {
     padding: 0.875rem 2rem;
     font-size: 1.1rem;
-    margin: 0.5rem 1rem 1rem;
+    margin: 0.5rem;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
   }
   
   .instructions {
@@ -1111,15 +1125,40 @@ input:checked + .slider:before {
     margin-top: 1rem;
     background: rgba(99, 102, 241, 0.15);
     border-width: 3px;
+    border-color: var(--primary-color);
   }
   
   .slide-indicator span {
     font-size: 4rem;
+    color: var(--primary-color);
   }
   
   .slide-indicator p {
     font-size: 1.2rem;
     font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .word-display h3 {
+    color: var(--text-primary) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+  }
+  
+  .chinese {
+    color: var(--text-secondary) !important;
+  }
+  
+  .role-reveal.impostor {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+    border-color: #fca5a5 !important;
+  }
+  
+  .role-reveal.innocent {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    border-color: #86efac !important;
   }
 }
 
