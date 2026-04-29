@@ -1,12 +1,34 @@
-# React + Vite
+# Word Impostors 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A local multiplayer party game where players share a word — except for the impostors, who get a different one. Discuss, deduce, and find them.
 
-Currently, two official plugins are available:
+## How to play
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Add 3 or more players.
+2. Pick how many impostors and choose a category.
+3. Pass the device around — each player privately sees their word.
+4. Discuss as a group and vote out the impostor(s).
 
-## Expanding the ESLint configuration
+Innocents see the same word. Impostors see a related-but-different word and have to bluff.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the URL Vite prints (usually http://localhost:5173).
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Tech
+
+- React + Vite
+- Plain CSS (responsive, mobile-first)
+- 19 word categories built-in
