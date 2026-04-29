@@ -11,6 +11,8 @@ A local multiplayer party game where players share a word — except for the imp
 
 Innocents see the same word. Impostors see a related-but-different word and have to bluff.
 
+YOU CAN GO TO THIS WEBSITE TO PLAY IT: https://wordimpostors2.vercel.app/
+
 ## Run locally
 
 ```bash
